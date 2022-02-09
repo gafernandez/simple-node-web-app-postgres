@@ -1,0 +1,23 @@
+@startuml
+class Account{
+    username : String
+    password : String
+    mail : String
+}
+
+class Asset{
+    symbol : String
+    name : String
+    type : String
+}
+
+class Alarm{
+    trigger : String
+    frequency : Integer
+    accountId : Integer
+    assetId : Integer
+}
+
+Account "1" --> "N" Alarm
+Alarm "1" --> "1" Asset
+@enduml
